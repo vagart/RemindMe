@@ -93,6 +93,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.notification) {
             // работа с напоминаниями
+            showNotificationTab();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -108,6 +109,10 @@ public class MainActivity extends AppCompatActivity
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
+    }
+
+    private void showNotificationTab(){
+        viewPager.setCurrentItem(Constants.TAB_TWO);
     }
 
 }
