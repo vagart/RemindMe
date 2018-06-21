@@ -15,7 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.natali.remindme.adapter.TabsPagerFragmentAdapter;
+import com.example.natali.remindme.adapter.TabsFragmentAdapter;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
     private void InitTabs(){
         viewPager = (ViewPager) findViewById(R.id.viewPager);
 
-        TabsPagerFragmentAdapter adapter = new TabsPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this,getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
